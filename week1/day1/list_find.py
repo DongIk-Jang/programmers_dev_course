@@ -10,7 +10,6 @@ def solution(L, x):
                 counter += 1
     else:
         answer = [-1]
-    
     return answer
 
 L = [64,72,83,72,54]
