@@ -13,4 +13,16 @@ def solution2(x):
         i += 1
     return fibo[x]
 
+def solution3(x):
+    if x <= 1:
+        return x
+    else:
+        i = 2
+        t0 = 0
+        t1 = 1
+        while i <= x:
+            t0, t1 = t1, t0 + t1
+            i += 1
+        return t1
+
 print(solution2(5))
