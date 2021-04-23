@@ -40,3 +40,39 @@ def solution(max_weight, specs, names):
 a = [["toy","70"], ["snack", "200"]]
 b = ["toy", "snack", "snack", "toy", "toy"]
 print(solution(300, a, b))
+
+def solution(max_weight, specs, names):
+    answer = 0
+    s = {}
+    for i, j in specs:
+        s[i] = s.get(i, int(j))
+    data = []
+    for i in names:
+        data.append(s[i])
+    data = data[::-1]
+    weightCount = 0
+    print(data)
+    while data:
+        t = data.pop()
+        weightCount += t
+        if weightCount == max_weight:
+            answer += 1
+            weightCount = 0
+        elif weightCount > max_weight:
+            weightCount = 0
+            data.append(t)
+            answer += 1
+    if weightCount != 0:
+        answer += 1
+    return answer
+
+
+# k = [["toy","70"], ["snack", "200"]]
+# s = {}
+# for i, j in k:
+#     s[i] = s.get(i, int(j))
+# print(s)
+
+a = [["toy","70"], ["snack", "200"]]
+b = ["toy", "snack", "snack", "toy", "toy"]
+solution(300, a, b)

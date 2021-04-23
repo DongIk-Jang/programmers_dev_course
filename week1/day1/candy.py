@@ -1,13 +1,13 @@
-# def solution(m, weights):
-#     candy = sorted(weights)
-#     temp = 0
-#     while candy:
-#         if candy[-1] <= m:
-#             temp += candy.pop()
+from itertools import combinations
 
+def solution(m, weights):
+    answer = 0
+    for i in range(1, len(weights)+1):
+        temp = combinations(weights, i)
+        for i in temp:
+            if sum(i) == m:
+                answer += 1
+    return answer
 
-#     return answer
-
-a = "abcd"
-if "b" not in a:
-    print("h")
+w = [500, 1500, 2500, 1000, 2000]
+print(solution(3000, w))

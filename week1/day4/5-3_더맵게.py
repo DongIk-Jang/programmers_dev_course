@@ -8,6 +8,7 @@ def solution(scoville, K):
         if min1 >= K:
             break
         elif len(scoville) == 0:
+            answer = -1
             break
         min2 = heapq.heappop(scoville)
         hotter = min1 + 2 * min2

@@ -27,6 +27,7 @@ class LinkedList:
 
 
     def insertAt(self, pos, newNode):
+        # newNode = Node(newNode)
         if pos < 1 or pos > self.nodeCount + 1:
             return False
 
@@ -91,3 +92,7 @@ class LinkedList:
 
 def solution(x):
     return 0
+
+a = LinkedList()
+# n = Node(10)
+a.insertAt(1, 10)
