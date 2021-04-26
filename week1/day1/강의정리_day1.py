@@ -40,14 +40,20 @@
 
 # print(iterative_fibo(5))
 
-a = 1
-b = 1
+# a = 1
+# b = 1
 
-if a == 1 and b == 1:
-    print("a=1, b=1")
-else:
-    print("else")
-    if a == 1 and b >1:
-        print("a=1, b>1")
-    elif a >= 1 or b < 2:
-        print("?")
+# if a == 1 and b == 1:
+#     print("a=1, b=1")
+# else:
+#     print("else")
+#     if a == 1 and b >1:
+#         print("a=1, b>1")
+#     elif a >= 1 or b < 2:
+#         print("?")
+
+k = [1,2,3,None, None, None]
+i = 0
+while k[i]:
+    print(k[i])
+    i += 1
