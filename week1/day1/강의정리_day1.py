@@ -52,8 +52,25 @@
 #     elif a >= 1 or b < 2:
 #         print("?")
 
-k = [1,2,3,None, None, None]
-i = 0
-while k[i]:
-    print(k[i])
-    i += 1
+# k = [1,2,3,None, None, None]
+# i = 0
+# while k[i]:
+#     print(k[i])
+#     i += 1
+
+import heapq
+a = []
+heapq.heappush(a, (4,2))
+print(a)
+heapq.heappush(a, (3,0))
+heapq.heappush(a, (2,1))
+print(a)
+print(heapq.heappop(a))
+
+# dd = [[] for i in range(100000)]
+# print(dd)
+
+s = {}
+s[1] = s.get(1) + 1
+s[2].add(3)
+print(s)

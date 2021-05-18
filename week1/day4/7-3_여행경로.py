@@ -7,6 +7,7 @@ def solution(tickets):
     # 알파벳의 역순으로 정렬, 시간 복잡도는 N log N
     for r in routes:
         routes[r].sort(reverse=True)
+    print(routes)
     stack = ["ICN"]
     path = []
     while len(stack) > 0:
@@ -17,3 +18,11 @@ def solution(tickets):
             stack.append(routes[top][-1])
             routes[top].pop()
     return path[::-1]
+
+
+a = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]
+routes = {}
+for t in a:
+    routes[t[0]] = routes.get(t[0], []) + [t[1]]
+print(routes)
+solution(a)
